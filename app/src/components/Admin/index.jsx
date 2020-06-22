@@ -3,8 +3,8 @@ import {
     Link
 } from "react-router-dom";
 import { connect } from 'react-redux';
-import Header from '../Header';
-class Home extends Component {
+
+class Admin extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,8 +13,9 @@ class Home extends Component {
 
     render() {
         return (
-            <div className="home">
-                <Header />
+            <div className="admin" >
+                <h1>Administration</h1>
+
             </div>
         );
     }
@@ -30,5 +31,5 @@ const mapStateToProps = (state) => {
         // isStart: state.home.isStart,
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Admin);
 
