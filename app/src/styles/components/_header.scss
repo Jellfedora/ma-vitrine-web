@@ -1,0 +1,60 @@
+.header {
+    height: 2.5em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    &__background {
+        height: 100%;
+    }
+
+    &__container {
+        position: relative;
+        bottom: 2.5em;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+
+        &__title {
+            font-size: 1.1em;
+        }
+
+        &__links {
+            display: flex;
+
+            &__container {
+                & svg {
+                    margin-right: 0.3em;
+                }
+
+                & a {
+                    margin-right: 1em;
+
+                    & span {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .header {
+        &__container {
+            &__links {
+                &__container {
+                    & a {
+                        & span {
+                            display: initial;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
